@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import moviesData from '../assets/data/moviesData.json';
-import { Movie } from './movie';
 import { HttpClientModule } from '@angular/common/http';
 
 // interface Movie {
@@ -20,6 +18,4 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'Angular Netflix Project';
-
-  movies: Movie[] = moviesData;
 }
