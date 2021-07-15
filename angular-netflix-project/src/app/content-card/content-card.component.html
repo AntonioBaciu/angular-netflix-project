@@ -9,7 +9,9 @@
           alt="..."
         />
         <div class="card-body">
-          <p class="card-text">Title:A</p>
+          <div *ngFor="let movie of movies">
+            <p>{{ movie.name }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -21,7 +23,7 @@
           alt="..."
         />
         <div class="card-body">
-          <p class="card-text">Title:B</p>
+          <p class="card-text">Title: Date: Genre:</p>
         </div>
       </div>
     </div>
@@ -33,7 +35,7 @@
           alt="..."
         />
         <div class="card-body">
-          <p class="card-text">Title:C</p>
+          <p class="card-text">Title: Date: Genre:</p>
         </div>
       </div>
     </div>
@@ -45,7 +47,7 @@
           alt="..."
         />
         <div class="card-body">
-          <p class="card-text">Title:D</p>
+          <p class="card-text">Title: Date: Genre:</p>
         </div>
       </div>
     </div>

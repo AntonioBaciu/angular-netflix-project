@@ -1,5 +1,17 @@
 import { Component } from '@angular/core';
-import { SearchbarComponent } from './searchbar/searchbar.component';
+import moviesData from '../assets/data/moviesData.json';
+import { Movie } from './movie';
+import { HttpClientModule } from '@angular/common/http';
+
+// interface Movie {
+//   image: String;
+//   name: String;
+//   releaseYear: String;
+//   genre: String;
+//   duration: String;
+//   actors: String;
+//   storyLine: String;
+// }
 
 @Component({
   selector: 'app-root',
@@ -9,5 +21,5 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 export class AppComponent {
   title = 'Angular Netflix Project';
 
-  // public searchInput: string;
+  movies: Movie[] = moviesData;
 }
