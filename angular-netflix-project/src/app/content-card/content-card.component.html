@@ -1,9 +1,9 @@
 <label>Filter Movies:</label>
-<input [(ngModel)]="movieSearch" type="text" />
+<input type="text" [(ngModel)]="movieSearch" class="form-control" id="search" />
 
 
 <div class="wrap">
-  <div class="card-wrap" *ngFor="let movie of movies | filter: movieSearch:'name'">
+  <div class="card-wrap" *ngFor="let movie of movies | filter: movieSearch">
     <div class="card" style="width: 18rem">
 
 

@@ -10,13 +10,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ContentCardComponent implements OnInit {
   movies: Movie[] = movieData;
-  movieSearch= "";
+  movieSearch!: string;
 
-  constructor(/*private http: HttpClient*/) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    // this.http.get('data/moviesData.json').subscribe(
-    //   data=>console.log(data)
-    // );
+    this.http.get('../assets/data/moviesData.json').subscribe(
+      data=>console.log(data)
+    );
   }
 }
