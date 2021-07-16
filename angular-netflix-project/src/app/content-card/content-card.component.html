@@ -2,14 +2,27 @@
   <div class="card-wrap" *ngFor="let movie of movies">
     <div class="card" style="width: 18rem">
       <img src="{{ movie.image }}" class="card-img-top" alt="..." />
+      <label>Filter Movies:</label>
+      <input [(ngModel)]="movieSearch" type="text" />
 
-      <div class="card-body">
-        <p class="card-text">{{ movie.name }}</p>
-        <p class="card-text">{{ movie.releaseYear }}</p>
-        <p class="card-text">{{ movie.genre }}</p>
-        <p class="card-text">{{ movie.duration }}</p>
-        <p class="card-text">{{ movie.actors }}</p>
-        <!-- <p class="card-text">{{ movie.storyLine }}</p> -->
+      <div *ngFor="let movie of movies | filter: movieSearch:'name'">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <img src="{{ movie.image }}" class="card-img-top" alt="..." />
+
+                <div class="card-body">
+                  <p class="card-text">{{ movie.name }}</p>
+                  <p class="card-text">{{ movie.releaseYear }}</p>
+                  <p class="card-text">{{ movie.genre }}</p>
+                  <p class="card-text">{{ movie.duration }}</p>
+                  <p class="card-text">{{ movie.actors }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

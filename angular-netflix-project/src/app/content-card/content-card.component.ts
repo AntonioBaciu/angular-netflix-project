@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../movie'; // always import this one ootherwise you can't use the data from the json file inside the card html
+import { Movie } from '../movie'; // always import this one otherwise you can't use the data from the json file inside the card html
 import movieData from '../../assets/data/moviesData.json';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-content-card',
@@ -9,8 +10,13 @@ import movieData from '../../assets/data/moviesData.json';
 })
 export class ContentCardComponent implements OnInit {
   movies: Movie[] = movieData;
+  movieSearch= "";
 
-  constructor() {}
+  constructor(/*private http: HttpClient*/) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.http.get('data/moviesData.json').subscribe(
+    //   data=>console.log(data)
+    // );
+  }
 }
