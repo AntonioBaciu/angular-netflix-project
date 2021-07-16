@@ -1,6 +1,18 @@
-<label>Filter Movies:</label>
-<input type="text" [(ngModel)]="movieSearch" class="form-control" id="search" />
-
+<!--Navbar-->
+<div>
+  <nav class="navbar navbar-light bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand">Netflix</a>
+      <form class="d-flex">
+        <input class="form-control me-2" name="search"  placeholder="Search" aria-label="Search" type="text"
+               [(ngModel)]="movieSearch"
+        />
+        <button class="btn btn-outline-light bg-dark " type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<!--End Navbar-->
 
 <div class="wrap">
   <div class="card-wrap" *ngFor="let movie of movies | filter: movieSearch">
