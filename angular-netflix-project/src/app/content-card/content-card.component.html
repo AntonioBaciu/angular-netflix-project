@@ -1,5 +1,7 @@
-<!-- image grid -->
-<div *ngFor="let movie of movies">
+<label>Filter Movies:</label>
+<input [(ngModel)]="movieSearch" type="text">
+
+<div *ngFor="let movie of movies |  filter:movieSearch:'name'">
   <div class="container">
     <div class="row">
       <div class="col">
