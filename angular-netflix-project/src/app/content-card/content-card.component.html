@@ -1,11 +1,13 @@
-<div class="wrap">
-  <div class="card-wrap" *ngFor="let movie of movies">
-    <div class="card" style="width: 18rem">
-      <img src="{{ movie.image }}" class="card-img-top" alt="..." />
-      <label>Filter Movies:</label>
-      <input [(ngModel)]="movieSearch" type="text" />
+<label>Filter Movies:</label>
+<input [(ngModel)]="movieSearch" type="text" />
 
-      <div *ngFor="let movie of movies | filter: movieSearch:'name'">
+
+<div class="wrap">
+  <div class="card-wrap" *ngFor="let movie of movies | filter: movieSearch:'name'">
+    <div class="card" style="width: 18rem">
+
+
+      <div>
         <div class="container">
           <div class="row">
             <div class="col">
