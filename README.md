@@ -1,13 +1,9 @@
 # angular-netflix-project
 
 ## Features:
-
-- [ ]  Search Bar
-- [ ]  Movie/Series/Games list with an img and few details
-- [ ]  When the image is selected, it has to expand showing more details
-- [ ]  Animation on hover
-- [ ]  Solid style + color scheme
-- [ ]  Option to add custom img + details
+- [x]  Working search bar (search by movie title, release date, actor, etc)
+- [x]  Data fetched from json file and displayed on the website
+- [x]  Instant search results
 
 # Tasks
 
@@ -16,6 +12,3 @@
 - [x]  Configure the server folder
 - [x]  Make the data from the Json file be displayed properly inside the movie card ( currently it displays the name property of all the movies)
 
-## Issues:
-
-Can't make the search bar by any means.
