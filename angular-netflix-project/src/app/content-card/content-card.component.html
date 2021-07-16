@@ -1,53 +1,22 @@
 <!-- image grid -->
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <div *ngFor="let movie of movies">
-            <p>{{ movie.name }}</p>
+<div *ngFor="let movie of movies">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{ movie.name }}</p>
+            <p class="card-text">{{ movie.releaseYear }}</p>
+            <p class="card-text">{{ movie.genre }}</p>
+            <p class="card-text">{{ movie.duration }}</p>
+            <p class="card-text">{{ movie.actors }}</p>
+            <p class="card-text">{{ movie.storyLine }}</p>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <p class="card-text">Title: Date: Genre:</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <p class="card-text">Title: Date: Genre:</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <p class="card-text">Title: Date: Genre:</p>
         </div>
       </div>
     </div>

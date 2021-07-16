@@ -9,6 +9,7 @@ import movieData from '../../assets/data/moviesData.json';
 })
 export class ContentCardComponent implements OnInit {
   movies: Movie[] = movieData;
+
   constructor() {}
 
   ngOnInit(): void {}
