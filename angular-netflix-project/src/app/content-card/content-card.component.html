@@ -1,31 +1,20 @@
 <label>Filter Movies:</label>
 <input type="text" [(ngModel)]="movieSearch" class="form-control" id="search" />
 
+<div class="container-fluid">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let movie of movies | filter: movieSearch"
+  >
+    <img src="{{ movie.image }}" class="card-img-top" alt="..." />
 
-<div class="wrap">
-  <div class="card-wrap" *ngFor="let movie of movies | filter: movieSearch">
-    <div class="card" style="width: 18rem">
-
-
-      <div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="card" style="width: 18rem">
-                <img src="{{ movie.image }}" class="card-img-top" alt="..." />
-
-                <div class="card-body">
-                  <p class="card-text">{{ movie.name }}</p>
-                  <p class="card-text">{{ movie.releaseYear }}</p>
-                  <p class="card-text">{{ movie.genre }}</p>
-                  <p class="card-text">{{ movie.duration }}</p>
-                  <p class="card-text">{{ movie.actors }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="card-body">
+      <p class="card-text">{{ movie.name }}</p>
+      <p class="card-text">{{ movie.releaseYear }}</p>
+      <p class="card-text">{{ movie.genre }}</p>
+      <p class="card-text">{{ movie.duration }}</p>
+      <p class="card-text">{{ movie.actors }}</p>
     </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
-.card-wrap {
+.container-fluid {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 20px;
+  justify-content: space-evenly;
+}
+
+img {
+  height: 400px;
 }
