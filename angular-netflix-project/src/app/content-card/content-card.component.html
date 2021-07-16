@@ -1,20 +1,15 @@
-<!-- image grid -->
-<div *ngFor="let movie of movies">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem">
-          <img src="{{ movie.image }}" class="card-img-top" alt="..." />
+<div class="wrap">
+  <div class="card-wrap" *ngFor="let movie of movies">
+    <div class="card" style="width: 18rem">
+      <img src="{{ movie.image }}" class="card-img-top" alt="..." />
 
-          <div class="card-body">
-            <p class="card-text">{{ movie.name }}</p>
-            <p class="card-text">{{ movie.releaseYear }}</p>
-            <p class="card-text">{{ movie.genre }}</p>
-            <p class="card-text">{{ movie.duration }}</p>
-            <p class="card-text">{{ movie.actors }}</p>
-            <p class="card-text">{{ movie.storyLine }}</p>
-          </div>
-        </div>
+      <div class="card-body">
+        <p class="card-text">{{ movie.name }}</p>
+        <p class="card-text">{{ movie.releaseYear }}</p>
+        <p class="card-text">{{ movie.genre }}</p>
+        <p class="card-text">{{ movie.duration }}</p>
+        <p class="card-text">{{ movie.actors }}</p>
+        <!-- <p class="card-text">{{ movie.storyLine }}</p> -->
       </div>
     </div>
   </div>
